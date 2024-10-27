@@ -15,6 +15,8 @@ import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import { ClickAwayListener } from '@mui/base/ClickAwayListener';
+import Nav from './nav/nav'
+
 
 const Header = () => {
 
@@ -68,7 +70,7 @@ const Header = () => {
             <header>
                 <div className='container-fluid'>
                     <div className='row'>
-                        <div className='col-sm-2'>
+                        <div className='col-sm-2 '>
                             <img src={Logo} />
                         </div>
                         {/* header-search start here */}
@@ -134,6 +136,7 @@ const Header = () => {
                     </div>
                 </div>
             </header >
+            <Nav />
 
         </>
 

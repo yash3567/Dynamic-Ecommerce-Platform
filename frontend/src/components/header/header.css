@@ -2,7 +2,7 @@ header {
     width: 100%;
     height: auto;
     margin: auto;
-    padding: 25px 0;
+    padding: 25px 23px;
 }
 
 header .headerSearch {
@@ -133,6 +133,7 @@ header .headerTabs li span .img {
     background: #fff;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     padding: 10px 0px;
+    z-index: 100;
 
 }
 
