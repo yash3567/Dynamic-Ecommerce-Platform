@@ -12,10 +12,14 @@
     text-transform: capitalize !important;
 }
 
+.nav nav ul li {
+    position: relative;
+}
+
 .nav nav ul li button {
     text-transform: capitalize !important;
     padding: 21px 15px !important;
-    color: rgba(0, 0, 0, 0.8) !important;
+    color: #3bb77e !important;
 
 
 }
@@ -33,13 +37,56 @@
 }
 
 .nav .part3 .phNo h3 {
-    font-size: 30px !important;
+    font-size: 35px !important;
     line-height: 35px;
 
 }
 
 .nav .part3 .phNo p {
-    font-size: 14px !important;
+    font-size: 18px !important;
     opacity: 0.8;
+
+}
+
+.nav nav .dropdown_menu {
+    position: absolute;
+    top: 150%;
+    left: 0px;
+    width: 270px;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 10px 0px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s ease-in-out;
+
+}
+
+nav .dropdown_menu li {
+    width: 100% !important;
+    list-style: none;
+    margin: 0px !important;
+}
+
+.nav nav .dropdown_menu li button {
+    width: 100% !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    color: #3bb77e !important;
+    text-transform: capitalize !important;
+    font-size: 16px !important;
+    padding: 8px 20px !important;
+}
+
+
+ nav .dropdown_menu li button:hover {
+    background: #f1f1f1 !important;
+}
+.nav nav li:hover .dropdown_menu{
+    top: 100%;
+    opacity: 1;
+    visibility: inherit;
 
 }

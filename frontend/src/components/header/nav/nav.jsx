@@ -36,6 +36,21 @@ const Nav = () => {
                                 </li>
                                 <li className="list-inline-item">
                                     <Button><Link>Pages <ExpandMoreIcon /></Link></Button>
+                                    <div className="dropdown_menu">
+                                        <ul>
+                                            <li><Button><Link to="/about">About Us</Link></Button></li>
+                                            <li><Button><Link to="/about">Contact</Link></Button></li>
+                                            <li><Button><Link to="/about">My Account</Link></Button></li>
+                                            <li><Button><Link to="/about">Login</Link></Button></li>
+                                            <li><Button><Link to="/about">Register</Link></Button></li>
+                                            <li><Button><Link to="/about">Forgot Password</Link></Button></li>
+                                            <li><Button><Link to="/about">Reset Password</Link></Button></li>
+                                            <li><Button><Link to="/about">Purchase Guide</Link></Button></li>
+                                            <li><Button><Link to="/about">Privacy Policy</Link></Button></li>
+                                            <li><Button><Link to="/about">Terms Of Services</Link></Button></li>
+                                            <li><Button><Link to="/about">404 Page</Link></Button></li>
+                                        </ul>
+                                    </div>
                                 </li>
                                 <li className="list-inline-item">
                                     <Button><Link>Contact</Link></Button>
