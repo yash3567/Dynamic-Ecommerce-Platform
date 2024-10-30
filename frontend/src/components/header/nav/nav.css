@@ -80,13 +80,22 @@ nav .dropdown_menu li {
     padding: 8px 20px !important;
 }
 
+.nav nav .dropdown_menu li button a {
+    font-weight: 400 !important;
+}
 
- nav .dropdown_menu li button:hover {
+nav .dropdown_menu li button:hover {
     background: #f1f1f1 !important;
 }
-.nav nav li:hover .dropdown_menu{
+
+.nav nav li:hover .dropdown_menu {
     top: 100%;
     opacity: 1;
     visibility: inherit;
 
+}
+
+.megaMenu {
+    height: auto !important;
+    padding: 30px 45px !important;
 }

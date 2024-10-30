@@ -2,8 +2,8 @@
 const Home = () => {
   return (
     <div>
-      <h1>This Is Yash Here ! </h1>
-      <p>Working On Website.....</p>
+      {/* <h1>This Is Yash Here ! </h1>
+      <p>Working On Website.....</p> */}
     </div>
   )
 }

@@ -9,11 +9,11 @@ const Nav = () => {
     return (
         <div className="nav d-flex align-items-center">
             <div className="container-fluid ">
-                <div className="row">
+                <div className="row position-relative">
                     <div className="col-sm-3 part1 d-flex align-items-center">
                         <Button className='bg-g text-white catTab' style={{ marginLeft: '30px' }}><GridViewOutlinedIcon />&nbsp;Browse All Categories<ExpandMoreIcon /></Button>
                     </div>
-                    <div className="col-sm-7 part2">
+                    <div className="col-sm-7 part2 position-static">
                         <nav>
                             <ul className="list list-inline mb-0">
                                 <li className="list-inline-item">
@@ -28,8 +28,24 @@ const Nav = () => {
                                 <li className="list-inline-item">
                                     <Button><Link>Vendors</Link></Button>
                                 </li>
-                                <li className="list-inline-item">
-                                    <Button><Link>Mego menu <ExpandMoreIcon /></Link></Button>
+                                <li className="list-inline-item position-static">
+                                    <Button><Link>Mega menu <ExpandMoreIcon /></Link></Button>
+                                    <div className="dropdown_menu megaMenu w-100">
+                                        <div className="row">
+                                            <div className="col">
+                                                <h4 className='text-g'>Fruits & Vegetables</h4>
+                                            </div>
+                                            <div className="col">
+                                                <h4 className='text-g'>Breakfast & Dairy</h4>
+                                            </div>
+                                            <div className="col">
+                                                <h4 className='text-g'>Meat & Seafood</h4>
+                                            </div>
+                                            <div className="col">
+                                                <img src="https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?cs=srgb&dl=pexels-janetrangdoan-1128678.jpg&fm=jpg" className='w-100' />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li className="list-inline-item">
                                     <Button><Link>Blog</Link></Button>
