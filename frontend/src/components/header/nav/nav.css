@@ -49,7 +49,7 @@
 }
 
 .nav nav .dropdown_menu {
-    position: absolute;
+    position: absolute !important;
     top: 150%;
     left: 0px;
     width: 270px;
@@ -97,5 +97,19 @@ nav .dropdown_menu li button:hover {
 
 .megaMenu {
     height: auto !important;
-    padding: 30px 45px !important;
+    padding: 40px 45px !important;
+
+
+}
+
+.megaMenu .col ul li {
+    margin-bottom: 10px !important;
+    display: block;
+}
+
+.megaMenu .col ul li a {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    text-decoration: none;
+
 }
