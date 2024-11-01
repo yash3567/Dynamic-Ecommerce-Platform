@@ -3,7 +3,8 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
-#root{
+
+#root {
   zoom: 90%;
 }
 
@@ -28,4 +29,10 @@ body {
 
 .text-g {
   color: #3bb77e;
+}
+
+.hd {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 25px;
 }
