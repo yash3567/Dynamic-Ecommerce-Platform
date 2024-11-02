@@ -18,6 +18,10 @@ body {
   padding: 0px 45px;
 }
 
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
 .cursor {
   cursor: pointer;
 }

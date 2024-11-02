@@ -1,6 +1,6 @@
 import './style.css'
 import Slider from "react-slick";
-import Photo from '../../assets/images/photo1.png'
+// import Photo from '../../assets/images/photo1.png'
 import Photo2 from '../../assets/images/photo2.png'
 import { useState } from 'react';
 
@@ -46,6 +46,7 @@ const CatSlider = () => {
                         {
                             itemBg.length !== 0 && itemBg.map((item, index) => {
                                 return (
+                                 
                                     <div className="item">
                                         <div className="info" style={{background:item}}>
                                             <img src={Photo2} />
@@ -53,6 +54,7 @@ const CatSlider = () => {
                                             <p>26 items</p>
                                         </div>
                                     </div>
+                                 
                                 )
                             })
                         }
@@ -160,7 +162,7 @@ const CatSlider = () => {
 
                 </div>
             </div>
-            <br /><br /><br /><br /><br /><br /><br /><br />
+      
         </>
     )
 }
