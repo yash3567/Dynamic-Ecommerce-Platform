@@ -16,13 +16,6 @@ const Home = () => {
         </div>
 
       </section>
-      <section className='homeProducts'>
-        <div className="container-fluid">
-          <h2 className="hd">Popular Products</h2>
-
-        </div>
-
-      </section>
     
     </>
 
