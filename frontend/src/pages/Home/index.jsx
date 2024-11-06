@@ -40,7 +40,7 @@ const Home = () => {
           </div>
 
 
-          <div className=" row productRow">
+          <div className="productRow">
             <div className="item">
               <Product />
             </div>
@@ -72,7 +72,6 @@ const Home = () => {
               <Product />
             </div>
           </div>
-
         </div>
       </section>
 

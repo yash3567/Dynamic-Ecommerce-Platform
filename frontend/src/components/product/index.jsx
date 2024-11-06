@@ -3,14 +3,39 @@ import { Link } from 'react-router-dom'
 import './style.css'
 import Rating from '@mui/material/Rating';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import CompareArrowsOutlinedIcon from '@mui/icons-material/CompareArrowsOutlined';
+import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 
 
 const Product = () => {
     return (
         <div className="productThumb">
-            <div className="imgWrapper">
-                <img src="https://content.optimumnutrition.com/i/on/on-50251_Image_01?$TTL_PRODUCT_IMAGES$&locale=en-au,en-gb,*" className='w-100' />
-            </div>
+            <Link>
+                <div className="imgWrapper">
+                    <img src="https://content.optimumnutrition.com/i/on/on-50251_Image_01?$TTL_PRODUCT_IMAGES$&locale=en-au,en-gb,*" className='w-100' />
+                    <div className="overlay" >
+                        <ul className="list list-inline mb-0">
+                            <li className="list-inline-item">
+                                <a className="cursor">
+                                    <FavoriteBorderOutlinedIcon />
+                                </a>
+                            </li>
+                            <li className="list-inline-item">
+                                <a className="cursor">
+                                    <CompareArrowsOutlinedIcon />
+                                </a>
+                            </li>
+                            <li className="list-inline-item">
+                                <a className="cursor">
+                                    <RemoveRedEyeOutlinedIcon />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </Link>
             <div className="info">
                 <span className="d-block catName">Gainer</span>
                 <h4 className='title'><Link>Products Optimum Nutrition AU</Link></h4>
