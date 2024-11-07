@@ -7,6 +7,7 @@ import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
 
 const Nav = () => {
     return (
+        // <div className="headerWrapper" >
         <div className="nav d-flex align-items-center">
             <div className="container-fluid ">
                 <div className="row position-relative">
@@ -114,6 +115,7 @@ const Nav = () => {
                 </div>
             </div>
         </div>
+        // </div>
     )
 }
 
