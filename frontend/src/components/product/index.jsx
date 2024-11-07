@@ -8,26 +8,32 @@ import CompareArrowsOutlinedIcon from '@mui/icons-material/CompareArrowsOutlined
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 
 
-const Product = () => {
+
+const Product = (props) => {
     return (
         <div className="productThumb">
+            {
+                props.tag !== null && props.tag !== undefined &&
+                <span className={`badge ${props.tag}`}>{props.tag}</span>
+            }
+
             <Link>
                 <div className="imgWrapper">
                     <img src="https://content.optimumnutrition.com/i/on/on-50251_Image_01?$TTL_PRODUCT_IMAGES$&locale=en-au,en-gb,*" className='w-100' />
-                    <div className="overlay" >
+                    <div className="overlay transition" >
                         <ul className="list list-inline mb-0">
                             <li className="list-inline-item">
-                                <a className="cursor">
+                                <a className="cursor" tooltip="Add to Wishlist ">
                                     <FavoriteBorderOutlinedIcon />
                                 </a>
                             </li>
                             <li className="list-inline-item">
-                                <a className="cursor">
+                                <a className="cursor" tooltip="Compare">
                                     <CompareArrowsOutlinedIcon />
                                 </a>
                             </li>
                             <li className="list-inline-item">
-                                <a className="cursor">
+                                <a className="cursor" tooltip="Quick View">
                                     <RemoveRedEyeOutlinedIcon />
                                 </a>
                             </li>

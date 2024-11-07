@@ -3,9 +3,41 @@
     height: auto;
     border: 1px solid rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 15px;
     transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.productThumb .badge {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    background: red;
+    z-index: 10;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 5px;
+    text-transform: capitalize;
+}
+
+.productThumb .badge.hot {
+    background: #f74b81 !important;
+}
+
+.productThumb .badge.sale {
+    background: #67bcee !important;
+}
+
+.productThumb .badge.new {
+    background: #3BB77E !important;
+}
+
+.productThumb .badge.best {
+    background: #f59758 !important;
 }
 
 .productThumb:hover {
@@ -34,8 +66,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transform: scale(0.8)
+}
 
-
+.productThumb:hover .imgWrapper .overlay {
+    opacity: 1;
+    transform: scale(1);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .productThumb .imgWrapper .overlay ul {
