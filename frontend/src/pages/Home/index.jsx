@@ -17,7 +17,7 @@ const Home = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    fade: true,
+    fade: false,
     arrows: true
   };
 
@@ -117,17 +117,13 @@ const Home = () => {
             </div>
 
             <div className="col-md-9">
-              <Slider {...settings} className="home_slider_Main">
-                {/* <div className="item">
-                  <img src={Banner} className="w-100" />
-                  <div className="info">
-                    <h2 className=" mb-4">
-                      Dont miss amazing<br />
-                      grocery deals
-                    </h2>
-                    <p>Sign up for daily newsletter</p>
-                  </div>
-                </div> */}
+              <Slider {...settings} className="prodSlider">
+                <Product tag='sale' />
+                <Product tag='sale' />
+                <Product tag='sale' />
+                <Product tag='sale' />
+                <Product tag='sale' />
+                <Product tag='sale' />
               </Slider>
             </div>
           </div>
