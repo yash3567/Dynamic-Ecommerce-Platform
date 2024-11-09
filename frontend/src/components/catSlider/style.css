@@ -57,7 +57,7 @@
     left: inherit !important;
 }
 
-.cat_slider_Main .item:hover .info {
+.cat_slider_Main .item:hover .info, .cat_slider_Main .slick-current .info {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     transform: scale(1.1);
 }

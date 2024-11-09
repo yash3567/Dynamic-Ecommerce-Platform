@@ -64,8 +64,19 @@ const Header = () => {
         }
 
     }
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            let position = window.pageYOffset;
+            if(position > 100){
+                headerRef.current.classList.add("fixed");
+                }
+                else{
+                    headerRef.current.classList.remove("fixed");
+                    }
+        })
+    }, [])
 
-   
+
     return (
 
 

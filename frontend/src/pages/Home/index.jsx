@@ -12,13 +12,15 @@ const Home = () => {
 
 
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
     fade: false,
-    arrows: true
+    arrows: true,
+    // autoplay: 3000,
+    centerMode: true
   };
 
 
@@ -94,7 +96,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='homeProducts pt-0'>
+      <section className='homeProducts  homeProductsRow2 pt-0'>
         <div className="container-fluid" style={{ padding: "0px 42px" }}>
           <div className="d-flex align-items-center justify-content-between">
             <h2 className="hd mb-0 mt-0">Daily Best Sells</h2>
@@ -112,18 +114,28 @@ const Home = () => {
           </div>
           <br /><br />
           <div className="row">
-            <div className="col-md-3">
-              <img src={Banners5} className='w-100' />
+            <div className="col-md-3 pr-5">
+              <img src={Banners5} className='' style={{ width: "350px", height: "535px" }} />
             </div>
+
 
             <div className="col-md-9">
               <Slider {...settings} className="prodSlider">
-                <Product tag='sale' />
-                <Product tag='sale' />
-                <Product tag='sale' />
-                <Product tag='sale' />
-                <Product tag='sale' />
-                <Product tag='sale' />
+                <div className="item">
+                  <Product tag='sale' />
+                </div>
+                <div className="item">
+                  <Product tag='hot' />
+                </div>
+                <div className="item">
+                  <Product tag='best' />
+                </div>
+                <div className="item">
+                  <Product tag='new ' />
+                </div>
+                <div className="item">
+                  <Product tag='hot' />
+                </div>
               </Slider>
             </div>
           </div>

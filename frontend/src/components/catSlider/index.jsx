@@ -34,7 +34,9 @@ const CatSlider = () => {
         slidesToShow: 10,
         slidesToScroll: 1,
         fade: false,
-        arrows: true
+        arrows: true,
+        autoplay: 2000,
+        centerMode: true
     };
 
     return (
@@ -46,15 +48,15 @@ const CatSlider = () => {
                         {
                             itemBg.length !== 0 && itemBg.map((item, index) => {
                                 return (
-                                 
+
                                     <div className="item">
-                                        <div className="info" style={{background:item}}>
+                                        <div className="info" style={{ background: item }}>
                                             <img src={Photo2} />
                                             <h5>Cake & Milk</h5>
                                             <p>26 items</p>
                                         </div>
                                     </div>
-                                 
+
                                 )
                             })
                         }
@@ -162,7 +164,7 @@ const CatSlider = () => {
 
                 </div>
             </div>
-      
+
         </>
     )
 }
