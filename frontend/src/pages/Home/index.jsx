@@ -19,8 +19,7 @@ const Home = () => {
     slidesToScroll: 1,
     fade: false,
     arrows: true,
-    // autoplay: 3000,
-    centerMode: true
+    autoplay: 2000,
   };
 
 

@@ -1,5 +1,4 @@
 .homeProducts {
-    /* margin-bottom: 200px; */
     padding: 25px 0px;
 }
 
@@ -44,11 +43,7 @@
 
 .prodSlider {
     display: flex;
-    /* padding: 30px 0px; */
     margin: 0px -15px;
     flex-wrap: wrap;
+
 }
-/* 
-.homeProductsRow2 .prodSlider .slick-current .productThumb {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6), 0 3px 6px rgba(0, 0, 0, 0.23)
-} */
