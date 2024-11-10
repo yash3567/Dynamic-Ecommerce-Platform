@@ -6,6 +6,7 @@ import Product from '../../components/product/index'
 import Banners5 from '../../assets/images/banner5.jpg'
 // import Banner from '../../assets/images/banner5.jpg'
 import Slider from 'react-slick'
+import TopProducts from './topProducts'
 
 
 const Home = () => {
@@ -137,6 +138,26 @@ const Home = () => {
                 </div>
               </Slider>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="topProductsSection">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col">
+              <TopProducts title='Top Selling' />
+            </div>
+            <div className="col">
+              <TopProducts title='Trending Products' />
+            </div>
+            <div className="col">
+              <TopProducts title='Recently addedd' />
+            </div>
+            <div className="col">
+              <TopProducts title='Top Rated' />
+            </div>
+
           </div>
         </div>
       </section>

@@ -67,12 +67,12 @@ const Header = () => {
     useEffect(() => {
         window.addEventListener("scroll", () => {
             let position = window.pageYOffset;
-            if(position > 100){
+            if (position > 100) {
                 headerRef.current.classList.add("fixed");
-                }
-                else{
-                    headerRef.current.classList.remove("fixed");
-                    }
+            }
+            else {
+                headerRef.current.classList.remove("fixed");
+            }
         })
     }, [])
 
@@ -152,6 +152,10 @@ const Header = () => {
                     </div>
                 </header >
                 <Nav />
+            </div>
+
+            <div className="afterHeader">
+
             </div>
         </>
 

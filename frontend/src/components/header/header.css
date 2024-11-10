@@ -11,16 +11,21 @@ header {
     transition: all 0.3s ease-in-out;
     background: #fff;
     box-shadow: 0 8px 20px rgb(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1000;
 }
 
 
 .headerWrapper.fixed {
-    position: fixed;
-    top: -100px;
-    left: 0px;
+    /* position: fixed; */
+    top: -110px;
+    /* left: 0px;
     width: 100%;
-    z-index: 1000;
- 
+    z-index: 1000; */
+
 }
 
 header .headerSearch {
@@ -72,6 +77,10 @@ header .headerSearch .searchIcon {
     opacity: 0.5;
     font-size: 30px !important;
 
+}
+
+.afterHeader {
+    margin-top: 210px;
 }
 
 
