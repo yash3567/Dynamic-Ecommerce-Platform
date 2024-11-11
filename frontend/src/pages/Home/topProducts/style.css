@@ -3,6 +3,7 @@
     font-weight: 600;
     position: relative;
     padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .topSelling_box h3:after {
@@ -24,4 +25,26 @@
     bottom: 0px;
     left: 0px;
     z-index: 10;
+}
+
+.topSelling_box .items .img {
+    width: 30%;
+    background: #f4f1f1;
+}
+
+.topSelling_box .items .info {
+    width: 70%;
+}
+
+.topSelling_box .items .info h4 {
+    font-weight: 600 !important;
+    font-size: 19px !important;
+    opacity: 0.8;
+
+}
+
+.topSelling_box .items .info a {
+    text-decoration: none;
+    color: #000;
+    
 }
