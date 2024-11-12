@@ -9,6 +9,7 @@ import Slider from 'react-slick'
 import TopProducts from './topProducts'
 import Banner6 from '../../assets/images/banner6.png'
 import Newsletter from '../../components/newSlider'
+import Footer from '../../components/footer/footer'
 
 
 const Home = () => {
@@ -184,7 +185,9 @@ const Home = () => {
         </div>
       </section>
 
-      <br /><br /><br /><br /><br /><br /><br /><br />
+
+      <Footer />
+
 
     </>
 
