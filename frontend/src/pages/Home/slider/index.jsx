@@ -15,7 +15,8 @@ const HomeSlider = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
-        arrows: true
+        arrows: true,
+        autoplay:2000
     };
     return (
         <section className="homeSlider">
