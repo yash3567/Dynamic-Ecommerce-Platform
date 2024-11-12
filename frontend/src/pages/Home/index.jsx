@@ -7,6 +7,8 @@ import Banners5 from '../../assets/images/banner5.jpg'
 // import Banner from '../../assets/images/banner5.jpg'
 import Slider from 'react-slick'
 import TopProducts from './topProducts'
+import Banner6 from '../../assets/images/banner6.png'
+import Newsletter from '../../components/newSlider'
 
 
 const Home = () => {
@@ -156,6 +158,26 @@ const Home = () => {
             </div>
             <div className="col">
               <TopProducts title='Top Rated' />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <section className="newsLetterSection">
+        <div className="container-fluid" style={{ padding: "0px 42px" }}>
+          <div className="box d-flex align-items-center">
+            <div className="info">
+              <h2>Stay home & get your daily <br /> needs from our shop</h2>
+              <p>start You'r Daily Shopping with Next Mart</p>
+              <br /><br />
+              <Newsletter />
+            </div>
+
+
+            <div className="img">
+              <img src={Banner6} className='w-100' />
             </div>
 
           </div>

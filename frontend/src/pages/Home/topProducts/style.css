@@ -27,6 +27,12 @@
     z-index: 10;
 }
 
+.topSelling_box .items {
+    padding: 20px 0px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
 .topSelling_box .items .img {
     width: 30%;
     background: #f4f1f1;
@@ -46,5 +52,9 @@
 .topSelling_box .items .info a {
     text-decoration: none;
     color: #000;
-    
+
+}
+
+.topSelling_box .items:hover{
+    transform: translateY(-10px);
 }
