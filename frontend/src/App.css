@@ -26,6 +26,19 @@ body {
   cursor: pointer;
 }
 
+.btn-g {
+  background: #3bb77e !important;
+  padding: 10px 25px !important;
+  border-radius: 5px !important;
+  color: #fff !important;
+  text-transform: capitalize !important;
+}
+
+.btn-g:hover {
+  background: #FDC040 !important;
+  color: #000 !important;
+}
+
 .bg-g,
 .bg-success {
   background: #3bb77e !important;
@@ -44,14 +57,17 @@ body {
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /* START TOOLTIP STYLES */
 [tooltip] {
-  position: relative; /* opinion 1 */
+  position: relative;
+  /* opinion 1 */
 }
 
 /* Applies to all tooltips */
 [tooltip]::before,
 [tooltip]::after {
-  text-transform: none; /* opinion 2 */
-  font-size: 16px; /* opinion 3 */
+  text-transform: none;
+  /* opinion 2 */
+  font-size: 16px;
+  /* opinion 3 */
   line-height: 1;
   user-select: none;
   pointer-events: none;
@@ -59,18 +75,23 @@ body {
   display: none;
   opacity: 0;
 }
+
 [tooltip]::before {
   content: '';
-  border: 5px solid transparent; /* opinion 4 */
-  z-index: 1001; /* absurdity 1 */
+  border: 5px solid transparent;
+  /* opinion 4 */
+  z-index: 1001;
+  /* absurdity 1 */
 }
+
 [tooltip]::after {
-  content: attr(tooltip); /* magic! */
-  
+  content: attr(tooltip);
+  /* magic! */
+
   /* most of the rest of this is opinion */
   font-family: Helvetica, sans-serif;
   text-align: center;
-  
+
   /* 
     Let the content set the size of the tooltips 
     but this will also keep them from being obnoxious
@@ -85,7 +106,8 @@ body {
   box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
   background: #3bb77e;
   color: #fff;
-  z-index: 1000; /* absurdity 2 */
+  z-index: 1000;
+  /* absurdity 2 */
 }
 
 /* Make the tooltips respond to hover */
@@ -107,10 +129,12 @@ body {
   border-bottom-width: 0;
   border-top-color: #3bb77e;
 }
+
 [tooltip]:not([flow])::after,
 [tooltip][flow^="up"]::after {
   bottom: calc(100% + 5px);
 }
+
 [tooltip]:not([flow])::before,
 [tooltip]:not([flow])::after,
 [tooltip][flow^="up"]::before,
@@ -125,9 +149,11 @@ body {
   border-top-width: 0;
   border-bottom-color: #333;
 }
+
 [tooltip][flow^="down"]::after {
   top: calc(100% + 5px);
 }
+
 [tooltip][flow^="down"]::before,
 [tooltip][flow^="down"]::after {
   left: 50%;
@@ -142,6 +168,7 @@ body {
   left: calc(0em - 5px);
   transform: translate(-.5em, -50%);
 }
+
 [tooltip][flow^="left"]::after {
   top: 50%;
   right: calc(100% + 5px);
@@ -156,6 +183,7 @@ body {
   right: calc(0em - 5px);
   transform: translate(.5em, -50%);
 }
+
 [tooltip][flow^="right"]::after {
   top: 50%;
   left: calc(100% + 5px);
@@ -177,7 +205,7 @@ body {
   }
 }
 
-/* FX All The Things */ 
+/* FX All The Things */
 [tooltip]:not([flow]):hover::before,
 [tooltip]:not([flow]):hover::after,
 [tooltip][flow^="up"]:hover::before,
@@ -194,16 +222,164 @@ body {
   animation: tooltips-horz 300ms ease-out forwards;
 }
 
- .price {
+.price {
   font-size: 22px;
   margin-right: 20px;
 }
 
- .oldPrice {
+.oldPrice {
   font-size: 18px;
   opacity: 0.6;
   color: #000;
   margin-left: -8px;
   text-decoration: line-through;
 
+}
+
+.listingPage {
+  width: 100%;
+  height: auto;
+  padding: 45px 0px;
+}
+
+.breadCrumb {
+  width: 100%;
+  height: auto;
+  padding: 45px 45px;
+  background: #d8f1e5;
+  border-radius: 20px;
+  margin-bottom: 30px;
+
+}
+
+.breadCrumb h1 {
+  color: #000;
+  opacity: 0.8;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.breadCrumb ul li {
+  margin-right: 20px !important;
+}
+
+.breadCrumb ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* 333333333333333333333333333 */
+.sidebarWrapper {
+  max-width: 20%;
+  flex: 0 0 20%;
+}
+
+.rightContent {
+  max-width: 80%;
+  flex: 0 0 80%;
+}
+
+.sidebarWrapper h3 {
+  font-size: 32px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.sidebarWrapper h3:after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #f0f0f0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.sidebarWrapper h3:before {
+  content: '';
+  width: 20%;
+  height: 3px;
+  background: #b0e5c2;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 10;
+}
+
+.sidebarWrapper .sidebar {
+  position: sticky;
+  top: 110px;
+}
+
+.sidebarWrapper .sidebar .card {
+  padding: 25px;
+  border-radius: 10px !important;
+  margin-bottom: 40px;
+}
+
+.sidebarWrapper .sidebar .card .catList .catItem {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.050);
+  cursor: pointer;
+  margin: 10px 0px;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+}
+
+
+.sidebarWrapper .sidebar .card .catList .catItem h4 {
+  color: #000;
+  font-size: 18px;
+}
+
+.sidebarWrapper .sidebar .card .catList .catItem .rounded-circle {
+  background: #BCE3C9;
+  width: 40px;
+  height: 40px;
+}
+
+.sidebarWrapper .sidebar .card .catList .catItem:hover {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.priceRange span {
+  font-size: 20px;
+}
+
+.filters {
+  padding: 25px 0px;
+}
+
+.filters ul {
+  max-height: 200px;
+  overflow-y: scroll;
+  margin-left: -45px;
+}
+
+.filters ul::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+.filters ul::-webkit-scrollbar-thumb {
+  background: #ccc !important;
+}
+
+.filters h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+.filters ul li {
+  width: 100%;
+  margin-bottom: 0px;
+  list-style: none;
+  /* margin-left: -37px; */
+}
+
+.sidebarWrapper .sidebar .btn {
+  width: 150px !important;
 }
