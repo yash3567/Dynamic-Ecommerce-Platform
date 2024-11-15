@@ -36,7 +36,7 @@ const CatSlider = () => {
         fade: false,
         arrows: true,
         autoplay: 2000,
-        centerMode: true
+        
     };
 
     return (
@@ -57,7 +57,7 @@ const CatSlider = () => {
                                         </div>
                                     </div>
 
-                                )
+                                )   
                             })
                         }
 

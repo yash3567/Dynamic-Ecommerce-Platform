@@ -138,6 +138,18 @@ const Listing = () => {
                 <div className="item">
                   <Product tag='hot' />
                 </div>
+                <div className="item">
+                  <Product tag='hot' />
+                </div>
+                <div className="item">
+                  <Product tag='hot' />
+                </div>
+                <div className="item">
+                  <Product tag='hot' />
+                </div>
+                <div className="item">
+                  <Product tag='hot' />
+                </div>
 
               </div>
 

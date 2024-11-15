@@ -1,7 +1,9 @@
 import Slider from "react-slick";
 import './index.css';
-import Banner from '../../../assets/images/banner4.jpg'
-import Banner2 from '../../../assets/images/banner4.jpg'
+import Banner from '../../../assets/images/slider-1.png'
+import Banner2 from '../../../assets/images/slider-2.png'
+// import Banner from '../../../assets/images/banner4.jpg'
+// import Banner2 from '../../../assets/images/banner4.jpg'
 // import Button from '@mui/material/Button';
 // import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import Newsletter from "../../../components/newSlider";
@@ -28,7 +30,7 @@ const HomeSlider = () => {
                             <h2 className=" mb-4">
                                 Dont miss amazing<br />
                                 grocery deals
-                            </h2>
+                            </h2 >
                             <p>Sign up for daily newsletter</p>
                         </div>
                     </div>

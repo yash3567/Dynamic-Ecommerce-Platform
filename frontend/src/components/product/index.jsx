@@ -19,7 +19,7 @@ const Product = (props) => {
 
             <Link>
                 <div className="imgWrapper">
-                    <img src="https://content.optimumnutrition.com/i/on/on-50251_Image_01?$TTL_PRODUCT_IMAGES$&locale=en-au,en-gb,*" className='w-100' />
+                    <img src="https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-2-2.jpg" className='w-100' />
                     <div className="overlay transition" >
                         <ul className="list list-inline mb-0">
                             <li className="list-inline-item">

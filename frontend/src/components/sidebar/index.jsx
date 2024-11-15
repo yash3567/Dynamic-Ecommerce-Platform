@@ -3,7 +3,7 @@ import Checkbox from '@mui/material/Checkbox';
 import * as React from 'react';
 import { Button } from '@mui/material';
 import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
-import bannerImg from '../../assets/images/banners2.jpg'
+import bannerImg from '../../assets/images/banner-11.png'
 
 function valuetext(value) {
     return `${value}°C`;

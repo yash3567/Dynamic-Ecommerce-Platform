@@ -26,6 +26,11 @@ body {
   cursor: pointer;
 }
 
+.btn-g a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
 .btn-g {
   background: #3bb77e !important;
   padding: 10px 25px !important;
@@ -37,6 +42,10 @@ body {
 .btn-g:hover {
   background: #FDC040 !important;
   color: #000 !important;
+}
+
+.btn-lg {
+  font-size: 22px !important;
 }
 
 .bg-g,
@@ -416,4 +425,3 @@ body {
 .rightContent .topStrip .tab_ .dropdownMenu {
   top: 100% !important;
 }
-
