@@ -1,6 +1,6 @@
 import Banners from '../../components/banner'
 import CatSlider from '../../components/catSlider'
-import SliderBanner from './slider/index'
+import SliderBanner from '../../pages/Listing/slider/index'
 import './style.css'
 import Product from '../../components/product/index'
 import Banners5 from '../../assets/images/banner5.jpg'
@@ -94,6 +94,12 @@ const Home = () => {
             </div>
             <div className="item">
               <Product />
+            </div>
+            <div className="item">
+              <Product tag='best' />
+            </div>
+            <div className="item">
+              <Product tag='hot' />
             </div>
           </div>
         </div>
