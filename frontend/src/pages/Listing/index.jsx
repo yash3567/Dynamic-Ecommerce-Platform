@@ -77,7 +77,7 @@ const Listing = () => {
                 </div>
               </div>
 
-              <div className="productRow" style={{ paddingLeft: 20 }}>
+              <div className="productRow" style={{padding: "0px 20px", paddingLeft: 20 }}>
                 <div className="item">
                   <Product tag='sale' />
                 </div>

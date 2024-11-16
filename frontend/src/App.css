@@ -425,3 +425,60 @@ body {
 .rightContent .topStrip .tab_ .dropdownMenu {
   top: 100% !important;
 }
+
+.breadcrumbWrapper {
+  width: 100%;
+  height: auto;
+  padding: 30px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.breadcrumb2 {
+  background: none !important;
+  padding: 0px !important;
+}
+
+/* .breadcrumb2 li {
+  font-size: 22px !important;
+}
+
+.breadcrumb2 li a {
+  color: #000 !important;
+  text-decoration: none;
+  padding: 0px 25px 0px 0px !important;
+  display: block;
+  position: relative;
+} */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: ">\00a0";
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 8px;
+
+}
+
+ul.breadcrumb li a {
+  color: #3bb77e;
+  text-decoration: none !important;
+}
+
+ul.breadcrumb li a:hover {
+  color: #3bb77e;
+  text-decoration: underline;
+}
+
+.breadcrumbWrapper {}
