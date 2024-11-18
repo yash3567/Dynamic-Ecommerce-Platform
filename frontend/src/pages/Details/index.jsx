@@ -5,12 +5,8 @@ import InnerImageZoom from 'react-inner-image-zoom';
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import Slider from "react-slick";
 import { useRef, useState } from "react";
-// import Image1 from '../../assets/images/thumbnail-1.jpg'
-// import Image2 from '../../assets/images/thumbnail-2.jpg'
-// import Image3 from '../../assets/images/thumbnail-3.jpg'
-// import Image4 from '../../assets/images/thumbnail-4.jpg'
-// import Image5 from '../../assets/images/thumbnail-5.jpg'
-// import Image6 from '../../assets/images/thumbnail-6.jpg'
+import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
+import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 
 
 
@@ -21,6 +17,7 @@ const DetailsPage = () => {
 
     const [bigImageSize, setBigImageSize] = useState([1500, 1500])
     const [smlImageSize, setSmlImageSize] = useState([150, 150])
+    const [activeSize, setActiveSize] = useState(0)
 
 
     const zoomSlider = useRef()
@@ -41,6 +38,10 @@ const DetailsPage = () => {
         setZommImage(url)
 
 
+    }
+
+    const isActive = (index) => {
+        setActiveSize(index)
     }
 
 
@@ -129,7 +130,35 @@ const DetailsPage = () => {
                                         <span className="text-Light oldPrice">$52</span>
                                     </div>
                                 </div>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br /> Aliquam rem officia, corrupti reiciendis minima nisi modi,<br /> quasi, odio minus dolore impedit fuga eum eligendi.</p>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Aliquam rem officia, corrupti reiciendis minima nisi modi,
+                                    quasi, odio minus dolore impedit fuga eum eligendi.</p>
+
+
+
+
+                                <div className="productSize d-flex align-items-center">
+                                    <span>Size / Weight:</span>
+                                    <ul className="list list-inline mb-0" style={{ paddingLeft: '20px' }}>
+                                        <li className="list-inline-item"><a className={`tag ${activeSize === 0 ? 'active' : ''}`} onClick={() => isActive(0)}>50g</a></li>
+                                        <li className="list-inline-item"><a className={`tag ${activeSize === 1 ? 'active' : ''}`} onClick={() => isActive(1)}>80g</a></li>
+                                        <li className="list-inline-item"><a className={`tag ${activeSize === 2 ? 'active' : ''}`} onClick={() => isActive(2)}>60g</a></li>
+                                        <li className="list-inline-item"><a className={`tag ${activeSize === 3 ? 'active' : ''}`} onClick={() => isActive(3)}>100g</a></li>
+                                        <li className="list-inline-item"><a className={`tag ${activeSize === 4 ? 'active' : ''}`} onClick={() => isActive(4)}>150g</a></li>
+                                    </ul>
+                                </div>
+
+
+
+                                <div className="addCartSection d-flex align-items-center" style={{ paddingTop: 4, paddingBottom: 4 }}>
+                                    <div className="counterSec">
+                                        <input type="number" />
+                                        <span className=" arrow plus"><KeyboardArrowUpOutlinedIcon /></span>
+                                        <span className=" arrow minus"><KeyboardArrowDownOutlinedIcon /></span>
+                                    </div>
+                                </div>
+
+
                             </div>
                             {/* productinfo end here  */}
 

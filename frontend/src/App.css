@@ -501,6 +501,10 @@ ul.breadcrumb li a:hover {
   max-width: 90%;
 }
 
+.detailsPage .productInfo {
+  padding-left: 50px;
+}
+
 .detailsPage .productInfo h1 {
   font-size: 55px;
   font-weight: bold;
@@ -561,9 +565,101 @@ ul.breadcrumb li a:hover {
 }
 
 .zoomSlider .slick-arrow.slick-next {
-  right: -5% !important;
+  right: -2% !important;
 }
 
 .zoomSlider .slick-arrow.slick-prev {
   left: -5% !important;
+}
+
+.productSize {
+  width: 100%;
+  height: auto;
+  padding: 25px 0px;
+}
+
+.productSize ul li {
+  margin-right: 15px !important;
+}
+
+.productSize ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px !important;
+  /* i re change the property which is solid */
+  border: 1px transparent rgba(0, 0, 0, 0.1);
+  border-radius: 5px !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #000;
+  font-size: 16px !important;
+  transition: all 0.1s ease-in-out;
+
+
+}
+
+.productSize ul li a.active {
+  background: #3bb77e !important;
+  color: #fff !important;
+}
+
+.productSize ul li a:hover {
+  background: #3bb77e !important;
+  color: #fff !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.addCartSection {
+  width: 100%;
+  height: auto;
+}
+
+.addCartSection .counterSec {
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #3bb77e !important;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.addCartSection .counterSec input {
+  width: 60px;
+  height: 40px;
+  padding: 5px;
+  border: 0px;
+  outline: none !important;
+  text-align: center;
+}
+
+.addCartSection .counterSec .arrow {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.addCartSection .counterSec {
+  position: relative;
+}
+
+.addCartSection .counterSec .arrow.plus {
+  top: 1px;
+  right: 10px;
+}
+
+.addCartSection .counterSec .arrow.minus {
+  bottom: 1px;
+  right: 10px;
 }
