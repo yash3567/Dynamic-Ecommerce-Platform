@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
 
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 20px;
 }
 
 #root {
@@ -55,6 +58,18 @@ body {
 
 .text-g {
   color: #3bb77e;
+}
+
+.text-org {
+  color: #FDC040 !important;
+}
+
+.text-Light {
+  color: #8b8b8b !important;
+}
+
+p {
+  color: #7E7E7E;
 }
 
 .hd {
@@ -481,4 +496,74 @@ ul.breadcrumb li a:hover {
   text-decoration: underline;
 }
 
-.breadcrumbWrapper {}
+
+.detailsContainer {
+  max-width: 90%;
+}
+
+.detailsPage .productInfo h1 {
+  font-size: 55px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.detailsPage .productInfo .priceSec .priceLarge {
+  font-size: 60px;
+  font-weight: bold;
+
+}
+
+.detailsPage .productInfo .priceSec .text-org {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.off {
+  margin-left: 12px;
+}
+
+.detailsPage .productInfo .priceSec .text-Light.oldPrice {
+  font-size: 30px;
+  font-weight: 600;
+  margin-left: 12px;
+}
+
+.productZoom {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.zoomSlider {
+  padding-top: 30px;
+}
+
+.zoomSlider .slick-slide {
+  padding-right: 15px !important;
+}
+
+.zoomSlider .item {
+  border: 1px solid transparent !important;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.zoomSlider .slick-current .item {
+  border: 1px solid #3bb77e !important;
+}
+
+.zoomSlider .slick-arrow {
+  top: 55% !important;
+  zoom: 80% !important;
+}
+
+.zoomSlider .slick-arrow.slick-next {
+  right: -5% !important;
+}
+
+.zoomSlider .slick-arrow.slick-prev {
+  left: -5% !important;
+}
