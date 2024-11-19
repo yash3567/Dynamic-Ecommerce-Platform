@@ -29,6 +29,29 @@ body {
   cursor: pointer;
 }
 
+.btn-border {
+  border: 1px solid rgba(103, 98, 98, 0.1) !important;
+  padding: 10px 25px !important;
+  border-radius: 5px !important;
+  color: #000 !important;
+
+}
+
+.btn-border svg {
+  opacity: 0.5;
+
+}
+
+.btn-border:hover {
+  border: 1px solid #3bb77e !important;
+  background: #3bb77e !important;
+  color: #fff !important;
+}
+
+.btn-border:hover svg {
+  opacity: 1 !important;
+}
+
 .btn-g a {
   color: #fff !important;
   text-decoration: none !important;
@@ -44,7 +67,7 @@ body {
 
 .btn-g:hover {
   background: #FDC040 !important;
-  color: #000 !important;
+  color: #fff !important;
 }
 
 .btn-lg {
@@ -549,10 +572,15 @@ ul.breadcrumb li a:hover {
   padding-right: 15px !important;
 }
 
+.zoomSlider * {
+  outline: none !important;
+}
+
 .zoomSlider .item {
   border: 1px solid transparent !important;
   overflow: hidden;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .zoomSlider .slick-current .item {
@@ -575,7 +603,7 @@ ul.breadcrumb li a:hover {
 .productSize {
   width: 100%;
   height: auto;
-  padding: 25px 0px;
+  padding: 25px 10px;
 }
 
 .productSize ul li {
@@ -595,6 +623,8 @@ ul.breadcrumb li a:hover {
   color: #000;
   font-size: 16px !important;
   transition: all 0.1s ease-in-out;
+  opacity: 0.5;
+  font-weight: 500;
 
 
 }
@@ -602,11 +632,13 @@ ul.breadcrumb li a:hover {
 .productSize ul li a.active {
   background: #3bb77e !important;
   color: #fff !important;
+  opacity: 1;
 }
 
 .productSize ul li a:hover {
   background: #3bb77e !important;
   color: #fff !important;
+  opacity: 1;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -662,4 +694,27 @@ input[type=number] {
 .addCartSection .counterSec .arrow.minus {
   bottom: 1px;
   right: 10px;
+}
+
+.addtocartbtn svg {
+  font-size: 28px !important;
+}
+
+.addCartSection button {
+  height: 55px;
+  min-width: inherit !important;
+}
+
+.addCartSection button svg {
+  font-size: 30px !important;
+}
+
+.addCartSection button.move {
+  position: relative;
+}
+
+
+.addCartSection button.move:hover{
+  transform: translateY(-8px);
+  transition: all 0.3s ease-in-out;
 }

@@ -7,7 +7,11 @@ import Slider from "react-slick";
 import { useRef, useState } from "react";
 import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
-
+import { Button } from "@mui/material";
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import CompareArrowsOutlinedIcon from '@mui/icons-material/CompareArrowsOutlined';
+import Sidebar from '../../components/sidebar/index'
 
 
 
@@ -18,6 +22,7 @@ const DetailsPage = () => {
     const [bigImageSize, setBigImageSize] = useState([1500, 1500])
     const [smlImageSize, setSmlImageSize] = useState([150, 150])
     const [activeSize, setActiveSize] = useState(0)
+    const [inputValue, setInputValue] = useState(1)
 
 
     const zoomSlider = useRef()
@@ -42,6 +47,17 @@ const DetailsPage = () => {
 
     const isActive = (index) => {
         setActiveSize(index)
+    }
+
+    const plus = () => {
+        setInputValue(inputValue + 1)
+    }
+
+
+    const minus = () => {
+        if (inputValue !== 1) {
+            setInputValue(inputValue - 1)
+        }
     }
 
 
@@ -130,16 +146,16 @@ const DetailsPage = () => {
                                         <span className="text-Light oldPrice">$52</span>
                                     </div>
                                 </div>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                    Aliquam rem officia, corrupti reiciendis minima nisi modi,
+                                <p style={{ fontSize: '19px' }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
+                                    Aliquam rem officia, corrupti reiciendis minima nisi modi,<br />
                                     quasi, odio minus dolore impedit fuga eum eligendi.</p>
 
 
 
 
                                 <div className="productSize d-flex align-items-center">
-                                    <span>Size / Weight:</span>
-                                    <ul className="list list-inline mb-0" style={{ paddingLeft: '20px' }}>
+                                    <span style={{ opacity: '0.5', fontWeight: 'bold' }}>Size / Weight:</span>
+                                    <ul className="list list-inline mb-0" style={{ paddingLeft: '20px' }} >
                                         <li className="list-inline-item"><a className={`tag ${activeSize === 0 ? 'active' : ''}`} onClick={() => isActive(0)}>50g</a></li>
                                         <li className="list-inline-item"><a className={`tag ${activeSize === 1 ? 'active' : ''}`} onClick={() => isActive(1)}>80g</a></li>
                                         <li className="list-inline-item"><a className={`tag ${activeSize === 2 ? 'active' : ''}`} onClick={() => isActive(2)}>60g</a></li>
@@ -150,15 +166,18 @@ const DetailsPage = () => {
 
 
 
-                                <div className="addCartSection d-flex align-items-center" style={{ paddingTop: 4, paddingBottom: 4 }}>
-                                    <div className="counterSec">
-                                        <input type="number" />
-                                        <span className=" arrow plus"><KeyboardArrowUpOutlinedIcon /></span>
-                                        <span className=" arrow minus"><KeyboardArrowDownOutlinedIcon /></span>
+                                <div className="addCartSection d-flex align-items-center" style={{ paddingTop: 4, paddingBottom: 4, }}>
+                                    <div className="counterSec" style={{ marginRight: '15px' }}>
+                                        <input type="number" value={inputValue} />
+                                        <span className=" arrow plus" onClick={plus}><KeyboardArrowUpOutlinedIcon /></span>
+                                        <span className=" arrow minus" onClick={minus}><KeyboardArrowDownOutlinedIcon /></span>
                                     </div>
+
+
+                                    <Button className="btn-g btn-lg addtocartbtn"><ShoppingCartOutlinedIcon style={{ marginRight: '2px' }} />Add to Cart</Button>
+                                    <Button className="move btn-lg addtocartbtn btn-border" style={{ marginLeft: '10px' }} ><FavoriteBorderOutlinedIcon /></Button>
+                                    <Button className="move btn-lg addtocartbtn btn-border" style={{ marginLeft: '10px' }}><CompareArrowsOutlinedIcon /></Button>
                                 </div>
-
-
                             </div>
                             {/* productinfo end here  */}
 
@@ -166,7 +185,8 @@ const DetailsPage = () => {
                     </div>
 
 
-                    <div className="col-md-3 rightPart">
+                    <div className="col-md-3 rightPart sidebarWrapper">
+                        <Sidebar />
 
                     </div>
                 </div>
