@@ -224,6 +224,23 @@ const DetailsPage = () => {
                     {/* product info ends here  */}
 
                 </div>
+
+
+
+
+
+                <div className="card mt-5 p-5 detailsPageTabs">
+                    <div className="customTabs">
+                        <ul className="list list-inline">
+                            <li className="list-inline-item">
+                                <Button>Description</Button>
+                                <Button>Additional info</Button>
+                                <Button>Reviews (3)</Button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     )

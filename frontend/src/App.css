@@ -571,7 +571,7 @@ ul.breadcrumb li a:hover {
 }
 
 .zoomSlider .slick-slide {
-  padding-right: 15px !important;
+  padding-right: 20px !important;
 }
 
 .zoomSlider * {
@@ -719,4 +719,21 @@ input[type=number] {
 .addCartSection button.move:hover {
   transform: translateY(-8px);
   transition: all 0.3s ease-in-out;
+}
+
+
+.detailsPageTabs {
+  border-radius: 30px !important;
+}
+
+
+
+.customTabs ul li button {
+  padding: 10px 25px !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  font-size: 20px !important;
+  text-transform: capitalize !important;
+  border-radius: 30px !important;
+  color: #000 !important;
+  margin-right: 30px !important;
 }
