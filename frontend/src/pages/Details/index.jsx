@@ -11,7 +11,8 @@ import { Button } from "@mui/material";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import CompareArrowsOutlinedIcon from '@mui/icons-material/CompareArrowsOutlined';
-import Sidebar from '../../components/sidebar/index'
+// import Sidebar from '../../components/sidebar/index'
+
 
 
 
@@ -21,12 +22,18 @@ const DetailsPage = () => {
 
     const [bigImageSize, setBigImageSize] = useState([1500, 1500])
     const [smlImageSize, setSmlImageSize] = useState([150, 150])
+
+
     const [activeSize, setActiveSize] = useState(0)
+
     const [inputValue, setInputValue] = useState(1)
+
+    const [activeTabs, setActiveTabs] = useState(0)
 
 
     const zoomSliderBig = useRef()
     const zoomSlider = useRef()
+
 
     var settings2 = {
         dots: false,
@@ -82,7 +89,7 @@ const DetailsPage = () => {
 
     return (
 
-        <section className="detailsPage">
+        <section className="detailsPage mb-5">
             <div className="breadcrumbWrapper mb-4">
 
                 <div className="container-fluid" style={{ padding: "0px 42px", marginTop: '-25px' }}>
@@ -233,11 +240,253 @@ const DetailsPage = () => {
                     <div className="customTabs">
                         <ul className="list list-inline">
                             <li className="list-inline-item">
-                                <Button>Description</Button>
-                                <Button>Additional info</Button>
-                                <Button>Reviews (3)</Button>
+                                <Button onClick={() => setActiveTabs(0)}>Description</Button>
                             </li>
+                            <li className="list-inline-item">
+                                <Button onClick={() => setActiveTabs(1)}>Additional info</Button>
+                            </li>
+                            <li className="list-inline-item">
+                                <Button onClick={() => setActiveTabs(2)}>Reviews (3)</Button>
+                            </li>
+
                         </ul>
+
+
+                        <br />
+
+
+                        {
+                            activeTabs === 0 &&
+
+                            <div className="tabContent">
+                                <p>Uninhibited carnally hired played in whimpered dear gorilla koala depending and much yikes off far quetzal goodness and from for grimaced goodness unaccountably and meadowlark near unblushingly crucial scallop tightly neurotic hungrily some and dear furiously this apart.</p>
+                                <p>Spluttered narrowly yikes left moth in yikes bowed this that grizzly much hello on spoon-fed that alas rethought much decently richly and wow against the frequent fluidly at formidable acceptably flapped besides and much circa far over the bucolically hey precarious goldfinch mastodon goodness gnashed a jellyfish and one however because.</p>
+
+                                <br />
+
+                                <h2>Packaging & Delivery</h2>
+                                <p>Less lion goodness that euphemistically robin expeditiously bluebird smugly scratched far while thus cackled sheepishly rigid after due one assenting regarding censorious while occasional or this more crane went more as this less much amid overhung anathematic because much held one exuberantly sheep goodness so where rat wry well concomitantly.</p>
+                                <p>Scallop or far crud plain remarkably far by thus far iguana lewd precociously and and less rattlesnake contrary caustic wow this near alas and next and pled the yikes articulate about as less cackled dalmatian in much less well jeering for the thanks blindly sentimental whimpered less across objectively fanciful grimaced wildly some wow and rose jeepers outgrew lugubrious luridly irrationally attractively dachshund.</p>
+
+                                <br />
+
+                                <h2>Suggested Use</h2>
+                                <p>Refrigeration not necessary.</p>
+                                <p>Stir before serving</p>
+
+                                <br />
+
+                                <h2>Other Ingredients</h2>
+                                <p>Organic raw pecans, organic raw cashews.</p>
+                                <p>This butter was produced using a LTG (Low Temperature Grinding) process</p>
+                                <p>Made in machinery that processes tree nuts but does not process peanuts, gluten, dairy or soy</p>
+
+                                <br />
+
+                                <h2>Warnings</h2>
+                                <p>Oil separation occurs naturally. May contain pieces of shell.</p>
+                            </div>
+
+                        }
+
+                        {
+                            activeTabs === 1 &&
+                            <div className="tabContent">
+                                <div className="table-responsive">
+                                    <table className="table table-bordered">
+                                        <tbody>
+                                            <tr className="stand-up">
+                                                <th>Stand Up</th>
+                                                <td>
+                                                    <p>35″L x 24″W x 37-45″H(front to back wheel)</p>
+                                                </td>
+                                            </tr>
+                                            <tr className="folded-wo-wheels">
+                                                <th>Folded (w/o wheels)</th>
+                                                <td>
+                                                    <p>32.5″L x 18.5″W x 16.5″H</p>
+                                                </td>
+                                            </tr>
+                                            <tr className="folded-w-wheels">
+                                                <th>Folded (w/ wheels)</th>
+                                                <td>
+                                                    <p>32.5″L x 24″W x 18.5″H</p>
+                                                </td>
+                                            </tr>
+                                            <tr className="door-pass-through">
+                                                <th>Door Pass Through</th>
+                                                <td>
+                                                    <p>24</p>
+                                                </td>
+                                            </tr>
+                                            <tr className="frame">
+                                                <th>Frame</th>
+                                                <td>
+                                                    <p>Aluminum</p>
+                                                </td>
+                                            </tr>
+                                            <tr className="weight-wo-wheels">
+                                                <th>Weight (w/o wheels)</th>
+                                                <td>
+                                                    <p>20 LBS</p>
+                                                </td>
+                                            </tr>
+                                            <tr className="weight-capacity">
+                                                <th>Weight Capacity</th>
+                                                <td>
+                                                    <p>60 LBS</p>
+                                                </td>
+                                            </tr>
+                                            <tr className="width">
+                                                <th>Width</th>
+                                                <td>
+                                                    <p>24″</p>
+                                                </td>
+                                            </tr>
+                                            <tr className="handle-height-ground-to-handle">
+                                                <th>Handle height (ground to handle)</th>
+                                                <td>
+                                                    <p>37-45″</p>
+                                                </td>
+                                            </tr>
+                                            <tr className="wheels">
+                                                <th>Wheels</th>
+                                                <td>
+                                                    <p>12″ air / wide track slick tread</p>
+                                                </td>
+                                            </tr>
+                                            <tr className="seat-back-height">
+                                                <th>Seat back height</th>
+                                                <td>
+                                                    <p>21.5″</p>
+                                                </td>
+                                            </tr>
+                                            <tr className="head-room-inside-canopy">
+                                                <th>Head room (inside canopy)</th>
+                                                <td>
+                                                    <p>25″</p>
+                                                </td>
+                                            </tr>
+                                            <tr className="pa_color">
+                                                <th>Color</th>
+                                                <td>
+                                                    <p>Black, Blue, Red, White</p>
+                                                </td>
+                                            </tr>
+                                            <tr className="pa_size">
+                                                <th>Size</th>
+                                                <td>
+                                                    <p>M, S</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        }
+
+                        {
+
+                            activeTabs === 2 &&
+                            <div className="tabContent">
+                                <div className="row">
+                                    <div className="col-md-8">
+                                        <h3>Customer questions & answers</h3>
+                                        <br />
+                                        <div className="card p-4 reviewsCard flex-row">
+                                            <div className="image">
+                                                <div className="rounded-circle">
+                                                    <img src="https://wp.alithemes.com/html/nest/demo/assets/imgs/blog/author-2.png" />
+                                                </div>
+                                                <span className="text-g d-block text-center font-weight-bold" style={{ fontWeight: "bold" }}>Sienna</span>
+                                            </div>
+
+
+                                            <div className="info pl-5" style={{ paddingLeft: "25px" }}>
+                                                <div className="d-flex align-items-center">
+                                                    <h5 className="text-Light">December 4, 2022 at 3:12 pm</h5>
+                                                    <div className="" style={{ marginLeft: "auto" }}>
+                                                        <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
+                                                    </div>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, suscipit exercitationem accusantium obcaecati quos voluptate nesciunt facilis itaque modi commodi dignissimos sequi repudiandae minus ab deleniti totam officia id incidunt?</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div className="card p-4 reviewsCard flex-row">
+                                            <div className="image">
+                                                <div className="rounded-circle">
+                                                    <img src="https://wp.alithemes.com/html/nest/demo/assets/imgs/blog/author-2.png" />
+                                                </div>
+                                                <span className="text-g d-block text-center font-weight-bold" style={{ fontWeight: "bold" }}>Sienna</span>
+                                            </div>
+
+
+                                            <div className="info pl-5" style={{ paddingLeft: "25px" }}>
+                                                <div className="d-flex align-items-center">
+                                                    <h5 className="text-Light">December 4, 2022 at 3:12 pm</h5>
+                                                    <div className="" style={{ marginLeft: "auto" }}>
+                                                        <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
+                                                    </div>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, suscipit exercitationem accusantium obcaecati quos voluptate nesciunt facilis itaque modi commodi dignissimos sequi repudiandae minus ab deleniti totam officia id incidunt?</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div className="card p-4 reviewsCard flex-row">
+                                            <div className="image">
+                                                <div className="rounded-circle">
+                                                    <img src="https://wp.alithemes.com/html/nest/demo/assets/imgs/blog/author-2.png" />
+                                                </div>
+                                                <span className="text-g d-block text-center font-weight-bold" style={{ fontWeight: "bold" }}>Sienna</span>
+                                            </div>
+
+
+                                            <div className="info pl-5" style={{ paddingLeft: "25px" }}>
+                                                <div className="d-flex align-items-center">
+                                                    <h5 className="text-Light">December 4, 2022 at 3:12 pm</h5>
+                                                    <div className="" style={{ marginLeft: "auto" }}>
+                                                        <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
+                                                    </div>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, suscipit exercitationem accusantium obcaecati quos voluptate nesciunt facilis itaque modi commodi dignissimos sequi repudiandae minus ab deleniti totam officia id incidunt?</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div className="card p-4 reviewsCard flex-row">
+                                            <div className="image">
+                                                <div className="rounded-circle">
+                                                    <img src="https://wp.alithemes.com/html/nest/demo/assets/imgs/blog/author-2.png" />
+                                                </div>
+                                                <span className="text-g d-block text-center font-weight-bold" style={{ fontWeight: "bold" }}>Sienna</span>
+                                            </div>
+
+
+                                            <div className="info pl-5" style={{ paddingLeft: "25px" }}>
+                                                <div className="d-flex align-items-center">
+                                                    <h5 className="text-Light">December 4, 2022 at 3:12 pm</h5>
+                                                    <div className="" style={{ marginLeft: "auto" }}>
+                                                        <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
+                                                    </div>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, suscipit exercitationem accusantium obcaecati quos voluptate nesciunt facilis itaque modi commodi dignissimos sequi repudiandae minus ab deleniti totam officia id incidunt?</p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div className="col-md-4">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        }
+
                     </div>
                 </div>
 
