@@ -60,7 +60,7 @@ body {
 .btn-g {
   background: #3bb77e !important;
   padding: 10px 25px !important;
-  border-radius: 5px !important;
+  border-radius: 10px !important;
   color: #fff !important;
   text-transform: capitalize !important;
 }
@@ -71,7 +71,8 @@ body {
 }
 
 .btn-lg {
-  font-size: 22px !important;
+  font-size: 24px !important;
+  padding: 10px 25px !important;
 }
 
 .bg-g,
@@ -527,7 +528,7 @@ ul.breadcrumb li a:hover {
 }
 
 .detailsPage .productInfo {
-  padding-left: 50px;
+  padding-left: 80px;
 }
 
 .detailsPage .productInfo h1 {
@@ -742,6 +743,10 @@ input[type=number] {
   margin-right: 30px !important;
 }
 
+.customTabs ul li button.active {
+  color: #3bb77e !important;
+}
+
 .reviewsCard {
   margin-bottom: 25px !important;
 }
@@ -764,4 +769,31 @@ input[type=number] {
   height: 100%;
   object-fit: cover;
   cursor: pointer;
+}
+
+
+.reviewForm .form-group {
+  margin-bottom: 25px;
+}
+
+.reviewForm .form-group .form-control {
+  height: 70px;
+  font-size: 20px;
+  border-radius: 7px !important;
+  padding-left: 20px;
+}
+
+.reviewForm .form-group textarea.form-control {
+  height: 200px;
+  padding-top: 25px;
+}
+
+.progressBarBox {
+  margin-bottom: 10px;
+}
+
+
+.relatedProduct  .item {
+  padding: 15px 5px;
+  padding-right: 25px !important;
 }

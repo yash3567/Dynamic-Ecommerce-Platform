@@ -11,6 +11,7 @@ import { Button } from "@mui/material";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import CompareArrowsOutlinedIcon from '@mui/icons-material/CompareArrowsOutlined';
+import Product from "../../components/product";
 // import Sidebar from '../../components/sidebar/index'
 
 
@@ -61,6 +62,19 @@ const DetailsPage = () => {
         arrows: true,
         // autoplay: 2000
     };
+
+
+    var related = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        fade: false,
+        arrows: true,
+        autoplay: 2000,
+    };
+
 
     const goto = (index) => {
         // setZommImage(url)
@@ -177,7 +191,7 @@ const DetailsPage = () => {
 
 
                     {/* product information here  */}
-                    <div className="col-md-7 productInfo">
+                    <div className="col-md-7 productInfo ">
                         <h1>Seeds of Change Organic Quinoa, Brown</h1>
                         <div className="d-flex align-items-center mb-4" style={{ marginTop: 3 }}>
                             <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} readOnly />
@@ -192,6 +206,12 @@ const DetailsPage = () => {
                                 <span className="text-Light oldPrice">$52</span>
                             </div>
                         </div>
+                        <p style={{ fontSize: '19px' }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Aliquam rem officia, corrupti reiciendis minima nisi modi,
+                            quasi, odio minus dolore impedit fuga eum eligendi.</p>
+                        <p style={{ fontSize: '19px' }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Aliquam rem officia, corrupti reiciendis minima nisi modi,
+                            quasi, odio minus dolore impedit fuga eum eligendi.</p>
                         <p style={{ fontSize: '19px' }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                             Aliquam rem officia, corrupti reiciendis minima nisi modi,
                             quasi, odio minus dolore impedit fuga eum eligendi.</p>
@@ -240,13 +260,13 @@ const DetailsPage = () => {
                     <div className="customTabs">
                         <ul className="list list-inline">
                             <li className="list-inline-item">
-                                <Button onClick={() => setActiveTabs(0)}>Description</Button>
+                                <Button className={`${activeTabs === 0 && 'active'}`} onClick={() => setActiveTabs(0)}>Description</Button>
                             </li>
                             <li className="list-inline-item">
-                                <Button onClick={() => setActiveTabs(1)}>Additional info</Button>
+                                <Button className={`${activeTabs === 1 && 'active'}`} onClick={() => setActiveTabs(1)}>Additional info</Button>
                             </li>
                             <li className="list-inline-item">
-                                <Button onClick={() => setActiveTabs(2)}>Reviews (3)</Button>
+                                <Button className={`${activeTabs === 2 && 'active'}`} onClick={() => setActiveTabs(2)}>Reviews (3)</Button>
                             </li>
 
                         </ul>
@@ -477,9 +497,86 @@ const DetailsPage = () => {
 
                                         </div>
 
-                                    </div>
 
-                                    <div className="col-md-4">
+                                        <br />
+
+                                        <br />
+
+
+                                        <form className="reviewForm">
+                                            <h4>Add a review</h4><br />
+                                            <div className="form-group">
+                                                <textarea className="form-control" name="" placeholder="Write a Comment..."></textarea>
+                                            </div>
+                                            <div className="row">
+                                                <div className="col-md-6">
+                                                    <div className="form-group">
+                                                        <input type="text" className="form-control" placeholder="Name" />
+                                                    </div>
+                                                </div>
+                                                <div className="col-md-6">
+                                                    <div className="form-group">
+                                                        <input type="text" className="form-control" placeholder="Email" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div className="form-group">
+                                                <input type="text" className="form-control" placeholder="Website" />
+                                            </div>
+
+                                            <br />
+
+                                            <div className="form-group">
+                                                <Button className="btn-g btn-lg">Submit Review</Button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                    {/* 
+                                    progress bar here... */}
+
+                                    <div className="col-md-4" style={{ paddingLeft: 50 }}>
+                                        <h4>Customer reviews</h4>
+                                        <div className="d-flex align-items-center" style={{ marginTop: '20px' }}>
+                                            <Rating name="half-rating-read" defaultValue={4.8} precision={0.5} readOnly />
+                                            <strong style={{ marginLeft: '10px' }}>4.8 out of 5</strong>
+                                        </div>
+
+                                        <br />
+
+
+                                        <div className="progressBarBox d-flex align-items-center">
+                                            <span style={{ marginRight: '10px' }}>5 star</span>
+                                            <div className="progress" style={{ width: '85%', height: '20px' }}>
+                                                <div className="progress-bar bg-success" style={{ width: '75%', height: '20px' }}>75%</div>
+                                            </div>
+                                        </div>
+                                        <div className="progressBarBox d-flex align-items-center">
+                                            <span style={{ marginRight: '10px' }}>4 star</span>
+                                            <div className="progress" style={{ width: '85%', height: '20px' }}>
+                                                <div className="progress-bar bg-success" style={{ width: '65%', height: '20px' }}>65%</div>
+                                            </div>
+                                        </div>
+                                        <div className="progressBarBox d-flex align-items-center">
+                                            <span style={{ marginRight: '10px' }}>3 star</span>
+                                            <div className="progress" style={{ width: '85%', height: '20px' }}>
+                                                <div className="progress-bar bg-success" style={{ width: '55%', height: '20px' }}>55%</div>
+                                            </div>
+                                        </div>
+                                        <div className="progressBarBox d-flex align-items-center">
+                                            <span style={{ marginRight: '10px' }}>2 star</span>
+                                            <div className="progress" style={{ width: '85%', height: '20px' }}>
+                                                <div className="progress-bar bg-success" style={{ width: '35%', height: '20px' }}>35%</div>
+                                            </div>
+                                        </div>
+                                        <div className="progressBarBox d-flex align-items-center">
+                                            <span style={{ marginRight: '10px' }}>1 star</span>
+                                            <div className="progress" style={{ width: '85%', height: '20px' }}>
+                                                <div className="progress-bar bg-success" style={{ width: '25%', height: '20px' }}>25%</div>
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -488,6 +585,31 @@ const DetailsPage = () => {
                         }
 
                     </div>
+                </div>
+
+
+                <br />
+
+                <div className="relatedProduct pt-5 pb-4">
+                    <h2 className="hd mb-0 mt-0">Related Products </h2>
+                    <br />
+                    <Slider {...related} className="prodSlider">
+                        <div className="item">
+                            <Product tag='sale' />
+                        </div>
+                        <div className="item">
+                            <Product tag='hot' />
+                        </div>
+                        <div className="item">
+                            <Product tag='best' />
+                        </div>
+                        <div className="item">
+                            <Product tag='new ' />
+                        </div>
+                        <div className="item">
+                            <Product tag='hot' />
+                        </div>
+                    </Slider>
                 </div>
 
             </div>
