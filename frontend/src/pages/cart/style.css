@@ -1,0 +1,93 @@
+.cartSection {
+    width: 100%;
+    height: auto;
+    padding: 35px 0px;
+}
+
+.cartSection .clearCart {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.cartSection .clearCart svg {
+    font-size: 25px !important;
+}
+
+/* General Table Styles */
+.cartWrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Header Styling */
+.cartWrapper table thead th {
+    background: #f1f1f1;
+    overflow: hidden;
+    text-align: center; /* Center-align header content */
+    padding: 10px;
+}
+
+.cartWrapper table thead th:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.cartWrapper table thead th:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Body Styling */
+.cartWrapper table tbody td {
+    vertical-align: middle;
+    text-align: center; /* Center-align body content */
+    padding: 10px;
+}
+
+/* Product Column */
+.cartWrapper table tbody td .img {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.cartWrapper table tbody td .info h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.cartWrapper table tbody td .info a {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}
+
+.cartWrapper table tbody td .info a:hover {
+    color: #bd1818;
+}
+
+/* Input and Counter Styling */
+.cartWrapper table tbody td .counterSec input {
+    width: 50px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.cartWrapper table tbody td .arrow {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* Button Styling */
+.cartWrapper table tbody td button {
+    background-color: #bd1818;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cartWrapper table tbody td button:hover {
+    background-color: #a31414;
+}
