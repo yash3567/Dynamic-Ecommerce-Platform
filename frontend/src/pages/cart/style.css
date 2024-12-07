@@ -23,7 +23,8 @@
 .cartWrapper table thead th {
     background: #f1f1f1;
     overflow: hidden;
-    text-align: center; /* Center-align header content */
+    text-align: center;
+    /* Center-align header content */
     padding: 10px;
 }
 
@@ -40,7 +41,8 @@
 /* Body Styling */
 .cartWrapper table tbody td {
     vertical-align: middle;
-    text-align: center; /* Center-align body content */
+    text-align: center;
+    /* Center-align body content */
     padding: 10px;
 }
 
@@ -90,4 +92,8 @@
 
 .cartWrapper table tbody td button:hover {
     background-color: #a31414;
+}
+
+.cartRightBox {
+    padding-left: 170px;
 }

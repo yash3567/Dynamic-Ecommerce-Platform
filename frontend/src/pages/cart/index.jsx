@@ -1,27 +1,13 @@
 import { Link } from "react-router-dom"
-import { useState } from "react";
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
-import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
-import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 import { Rating } from "@mui/material";
+import QuantityBox from "../../components/quantityBox";
 import './style.css'
+import { Button } from '@mui/material';
 
 const Cart = () => {
 
-    const [inputValue, setInputValue] = useState(1)
 
-
-
-    const plus = () => {
-        setInputValue(inputValue + 1)
-    }
-
-
-    const minus = () => {
-        if (inputValue !== 1) {
-            setInputValue(inputValue - 1)
-        }
-    }
 
     return (
 
@@ -65,7 +51,7 @@ const Cart = () => {
 
                             <div className="cartWrapper mt-4">
                                 <div className="table-responsive">
-                                    <table className="table">
+                                    <table className="table table-bordered ">
                                         <thead>
                                             <tr style={{ fontSize: '17px', textAlign: 'center' }}>
                                                 <th>Product</th>
@@ -81,7 +67,7 @@ const Cart = () => {
                                                 <td>
                                                     <div className="d-flex align-items-center">
                                                         <div className="img">
-                                                            <img src="https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-1-1.jpg" alt="" className="w-100" />
+                                                            <img src="https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-2-1.jpg" alt="" className="w-100" />
                                                         </div>
                                                         <div className="info" style={{ paddingLeft: '20px' }}>
                                                             <Link>
@@ -92,19 +78,13 @@ const Cart = () => {
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td style={{ textAlign: 'center' }}>$2.51</td>
+                                                <td style={{ textAlign: 'center', fontWeight: '600', fontSize: '20px' }}>$2.51</td>
                                                 <td style={{ textAlign: 'center' }}>
-                                                    <div className="addCartSection d-flex align-items-center justify-content-center">
-                                                        <div className="counterSec" style={{ display: 'flex', alignItems: 'center' }}>
-                                                            <input type="number" value={inputValue} style={{ width: '50px', textAlign: 'center' }} />
-                                                            <span className="arrow plus" onClick={plus} style={{ cursor: 'pointer' }}><KeyboardArrowUpOutlinedIcon /></span>
-                                                            <span className="arrow minus" onClick={minus} style={{ cursor: 'pointer' }}><KeyboardArrowDownOutlinedIcon /></span>
-                                                        </div>
-                                                    </div>
+                                                    <QuantityBox />
                                                 </td>
-                                                <td style={{ textAlign: 'center' }}>$2.51</td>
+                                                <td style={{ textAlign: 'center', color: '#3bb77e', fontWeight: '600', fontSize: '20px' }}>$2.51</td>
                                                 <td style={{ textAlign: 'center' }}>
-                                                    <button className="btn btn-danger" style={{ padding: '5px 10px' }}>Remove</button>
+                                                    <button className="btn btn-danger" style={{ padding: '5px 10px' }}><DeleteOutlineOutlinedIcon />Remove</button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -126,19 +106,13 @@ const Cart = () => {
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td style={{ textAlign: 'center' }}>$2.51</td>
+                                                <td style={{ textAlign: 'center', fontWeight: '600', fontSize: '20px' }}>$2.51</td>
                                                 <td style={{ textAlign: 'center' }}>
-                                                    <div className="addCartSection d-flex align-items-center justify-content-center">
-                                                        <div className="counterSec" style={{ display: 'flex', alignItems: 'center' }}>
-                                                            <input type="number" value={inputValue} style={{ width: '50px', textAlign: 'center' }} />
-                                                            <span className="arrow plus" onClick={plus} style={{ cursor: 'pointer' }}><KeyboardArrowUpOutlinedIcon /></span>
-                                                            <span className="arrow minus" onClick={minus} style={{ cursor: 'pointer' }}><KeyboardArrowDownOutlinedIcon /></span>
-                                                        </div>
-                                                    </div>
+                                                    <QuantityBox />
                                                 </td>
-                                                <td style={{ textAlign: 'center' }}>$2.51</td>
+                                                <td style={{ textAlign: 'center', color: '#3bb77e', fontWeight: '600', fontSize: '20px' }}>$2.51</td>
                                                 <td style={{ textAlign: 'center' }}>
-                                                    <button className="btn btn-danger" style={{ padding: '5px 10px' }}>Remove</button>
+                                                    <button className="btn btn-danger" style={{ padding: '5px 10px' }}><DeleteOutlineOutlinedIcon />Remove</button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -150,11 +124,11 @@ const Cart = () => {
                                                 <td>
                                                     <div className="d-flex align-items-center">
                                                         <div className="img">
-                                                            <img src="https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-1-1.jpg" alt="" className="w-100" />
+                                                            <img src="https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-3-1.jpg" alt="" className="w-100" />
                                                         </div>
                                                         <div className="info" style={{ paddingLeft: '20px' }}>
                                                             <Link>
-                                                            
+
                                                                 <h4 style={{ fontSize: '17px' }}>Field Roast Chao Cheese Creamy Original</h4>
                                                             </Link>
                                                             <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} readOnly />
@@ -162,19 +136,13 @@ const Cart = () => {
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td style={{ textAlign: 'center' }}>$2.51</td>
+                                                <td style={{ textAlign: 'center', fontWeight: '600', fontSize: '20px' }}>$2.51</td>
                                                 <td style={{ textAlign: 'center' }}>
-                                                    <div className="addCartSection d-flex align-items-center justify-content-center">
-                                                        <div className="counterSec" style={{ display: 'flex', alignItems: 'center' }}>
-                                                            <input type="number" value={inputValue} style={{ width: '50px', textAlign: 'center' }} />
-                                                            <span className="arrow plus" onClick={plus} style={{ cursor: 'pointer' }}><KeyboardArrowUpOutlinedIcon /></span>
-                                                            <span className="arrow minus" onClick={minus} style={{ cursor: 'pointer' }}><KeyboardArrowDownOutlinedIcon /></span>
-                                                        </div>
-                                                    </div>
+                                                    <QuantityBox />
                                                 </td>
-                                                <td style={{ textAlign: 'center' }}>$2.51</td>
+                                                <td style={{ textAlign: 'center', color: '#3bb77e', fontWeight: '600', fontSize: '20px' }} className="">$2.51</td>
                                                 <td style={{ textAlign: 'center' }}>
-                                                    <button className="btn btn-danger" style={{ padding: '5px 10px' }}>Remove</button>
+                                                    <button className="btn btn-danger" style={{ padding: '5px 10px' }}><DeleteOutlineOutlinedIcon />Remove</button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -186,7 +154,7 @@ const Cart = () => {
                                                 <td>
                                                     <div className="d-flex align-items-center">
                                                         <div className="img">
-                                                            <img src="https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-1-1.jpg" alt="" className="w-100" />
+                                                            <img src="https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-2-1.jpg" alt="" className="w-100" />
                                                         </div>
                                                         <div className="info" style={{ paddingLeft: '20px' }}>
                                                             <Link>
@@ -197,19 +165,13 @@ const Cart = () => {
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td style={{ textAlign: 'center' }}>$2.51</td>
+                                                <td style={{ textAlign: 'center', fontWeight: '600', fontSize: '20px' }}>$2.51</td>
                                                 <td style={{ textAlign: 'center' }}>
-                                                    <div className="addCartSection d-flex align-items-center justify-content-center">
-                                                        <div className="counterSec" style={{ display: 'flex', alignItems: 'center' }}>
-                                                            <input type="number" value={inputValue} style={{ width: '50px', textAlign: 'center' }} />
-                                                            <span className="arrow plus" onClick={plus} style={{ cursor: 'pointer' }}><KeyboardArrowUpOutlinedIcon /></span>
-                                                            <span className="arrow minus" onClick={minus} style={{ cursor: 'pointer' }}><KeyboardArrowDownOutlinedIcon /></span>
-                                                        </div>
-                                                    </div>
+                                                    <QuantityBox />
                                                 </td>
-                                                <td style={{ textAlign: 'center' }}>$2.51</td>
+                                                <td style={{ textAlign: 'center', color: '#3bb77e', fontWeight: '600', fontSize: '20px' }}>$2.51</td>
                                                 <td style={{ textAlign: 'center' }}>
-                                                    <button className="btn btn-danger" style={{ padding: '5px 10px' }}>Remove</button>
+                                                    <button className="btn btn-danger" style={{ padding: '5px 10px' }}><DeleteOutlineOutlinedIcon />Remove</button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -219,15 +181,44 @@ const Cart = () => {
 
                         </div>
 
+                        <div className="col-md-5 cartRightBox">
+                            <div className="card p-4">
+                                <div className="d-flex align-items-center mb-4">
+                                    <h5 className="mb-0 text-Light">Subtotal</h5>
+                                    <h3 className="mb-0" style={{ marginLeft: 'auto', fontWeight: 'bold' }}><span className="text-g">$12.31</span></h3>
+                                </div>
+
+
+                                <div className="d-flex align-items-center mb-4">
+                                    <h5 className="mb-0 text-Light">Shipping</h5>
+                                    <h3 className="mb-0" style={{ marginLeft: 'auto', fontWeight: 'bold' }}><span>Free</span></h3>
+                                </div>
+
+
+                                <div className="d-flex align-items-center mb-4">
+                                    <h5 className="mb-0 text-Light">Estimate for</h5>
+                                    <h3 className="mb-0" style={{ marginLeft: 'auto', fontWeight: 'bold' }}>United kingdom</h3>
+                                </div>
+
+
+                                <div className="d-flex align-items-center mb-4">
+                                    <h5 className="mb-0 text-Light">Total</h5>
+                                    <h3 className="mb-0" style={{ marginLeft: 'auto', fontWeight: 'bold' }}><span className="text-g">$12.31</span></h3>
+                                </div>
+
+                                <br />
+                                <Button className='btn-g btn-lg'>Proceed To CheckOut</Button>
+
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
 
-                <div className="col-md-5">
 
-                </div>
-        
-     
+
+
 
             </section >
 
