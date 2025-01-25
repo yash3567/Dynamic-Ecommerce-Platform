@@ -36,7 +36,7 @@ const CatSlider = () => {
         fade: false,
         arrows: true,
         autoplay: 2000,
-        
+
     };
 
     return (
@@ -48,117 +48,20 @@ const CatSlider = () => {
                         {
                             itemBg.length !== 0 && itemBg.map((item, index) => {
                                 return (
-
-                                    <div className="item">
-                                        <div className="info" style={{ background: item }}>
-                                            <img src={Photo2} />
-                                            <h5>Cake & Milk</h5>
-                                            <p>26 items</p>
+                                    <>
+                                        <div className="item">
+                                            <div className="info" style={{ background: item }}>
+                                                <img src={Photo2} />
+                                                <h5>Cake & Milk</h5>
+                                                <p>26 items</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </>
 
-                                )   
+                                )
                             })
                         }
 
-                        {/* <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="info">
-                                <img src={Photo} />
-                                <h5>Cake & Milk</h5>
-                                <p>26 items</p>
-                            </div>
-                        </div> */}
 
                     </Slider>
 
